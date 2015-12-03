@@ -1,0 +1,13 @@
+$ git help	gives uses of commands
+$ git clone <URL>     clones the directory at the URL from Github onto the computer
+$ git add <filename>  adds the file to the staging area
+$ git mv <thing> moves or renames a file, folder, or symlink
+$ git status
+$ git diff <filename>
+$ git commit -m "<commit comment>"
+$ git log
+$ git show HEAD
+$ git checkout HEAD filename
+$ git add <filename_1> <filename_2>
+$ git reset HEAD <filename>
+$ git reset <SHA>
