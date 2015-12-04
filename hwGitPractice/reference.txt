@@ -7,9 +7,5 @@ $ git diff <filename>	checks differences between the last commit and the current
 $ git commit -m "<commit comment>"	   commits the file to the staging area
 $ git log    shows the log of the current working directory
 $ git show HEAD	   shows what's happened in the HEAD
-$ git checkout HEAD filename	removes the changes in the working directory
-$ git add <filename_1> <filename_2>	add two files to the staging area
-$ git reset HEAD <filename>	resets the file to the previous commit
-$ git reset <SHA>	resets to the commit given by the SHA code
-$ git pull  	pulls the directory from Github to edit
+
 $ git push	pushes the changed directory to Github with changes	
