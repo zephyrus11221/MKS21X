@@ -33,7 +33,7 @@ public class BarCode implements Comparable{
 	int _checkSum = 0;
 	char[] hold = zipnum.toCharArray();
 	for (int x = 0; x<hold.length; x++){
-	    String dig = ""+hold[x]
+	    String dig = ""+hold[x];
 	    _checkSum+=Integer.parseInt(String.parseString(dig));
 	}
 	return _checkSum%10;
