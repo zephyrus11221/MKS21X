@@ -1,37 +1,58 @@
 public class BarCode implements Comparable{
-// instance variables
-   private String _zip;
-   private int _checkDigit;
-    private static final digits[]={"||:::"}
-// constructors
-//precondtion: zip.length() = 5 and zip contains only digits.
-//postcondition: throws a runtime exception zip is not the correct length
-//               or zip contains a non digit
-//               _zip and _checkDigit are initialized.
-public BarCode(String zip) {}
-
-// postcondition: Creates a copy of a bar code.
-public BarCode(BarCode x){}
-
-
-//post: computes and returns the check sum for _zip
-private int checkSum(){}
-
-//postcondition: format zip + check digit + barcode 
-//ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
-public String toString(){}
-
-
-public boolean equals(Object other){
- return (other instanceof BarCode) && (((BarCode)other)._zip.equals(_zip));
+    // instance variables
+    private String _zip="";
+    private int _checkDigit=0; 
+    private String zipnum="";
+    private static final digits[]={"||:::", ":::||", "::|:|", "::||:", ":|::|", ":|:|:", ":||::", "|:::|", "|::|:", "|:|::"};
+    // constructors
+    //precondtion: zip.length() = 5 and zip contains only digits.
+    //postcondition: throws a runtime exception zip is not the correct length
+    //               or zip contains a non digit
+    //               _zip and _checkDigit are initialized.
+    public BarCode(String zip) {
+	zipnum=zip;
+	char[] hold = zip.toCharArray();
+	for (int x = 0; x<hold.length; x++){
+	    _zip+=digits[hold[x]];
+	}
 
 }
-// postcondition: false if the object is not a BarCode, 
-// false if it is a non-matching barcode
-// true when they match.
+    
+    // postcondition: Creates a copy of a bar code.
+    public BarCode(BarCode x){
+	this._zip=x._zip;
+	this._checkDigit=x._checkDigit;
 
-
-public int compareTo(Comparable other){}
-// postcondition: compares the zip + checkdigit 
-
+}    
+    
+    //post: computes and returns the check sum for _zip
+    private int checkSum(){
+	int _checkSum = 0
+	char[] hold = zipnum.toCharArray();
+	for (int x = 0; x<hold.length; x++){
+	    _checkSum+=Integer.parseInteger(hold[x]);
+	}
+	return _checkSum%10;
+    }
+    
+    //postcondition: format zip + check digit + barcode 
+    //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
+    public String toString(){
+	return "|" + zipnum +  _zip + digits[checksum()] + "|";
+    }
+    
+    
+    public boolean equals(Object other){
+	return (other instanceof BarCode) && (((BarCode)other)._zip.equals(_zip));
+    }
+    // postcondition: false if the object is not a BarCode, 
+    // false if it is a non-matching barcode
+    // true when they match.
+    
+    
+    public int compareTo(Comparable other){
+	return Integer.parseInteger(zipnum)-Integer.parseInteger(other.zipnum);
+    }
+    // postcondition: compares the zip + checkdigit 
+    
 }
