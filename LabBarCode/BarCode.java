@@ -31,7 +31,7 @@ public class BarCode implements Comparable{
 	int _checkSum = 0;
 	char[] hold = zipnum.toCharArray();
 	for (int x = 0; x<hold.length; x++){
-	    _checkSum+=Integer.parseInteger(hold[x]);
+	    _checkSum+=Integer.parseInt(hold[x]);
 	}
 	return _checkSum%10;
     }
@@ -39,7 +39,7 @@ public class BarCode implements Comparable{
     //postcondition: format zip + check digit + barcode 
     //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
     public String toString(){
-	return "|" + zipnum +  _zip + digits[checksum()] + "|";
+	return "|" + zipnum +  _zip + digits[checkSum()] + "|";
     }
     
     
@@ -52,7 +52,7 @@ public class BarCode implements Comparable{
     
     
     public int compareTo(Comparable other){
-	return Integer.parseInteger(zipnum)-Integer.parseInteger(other.zipnum);
+	return Integer.parseInt(zipnum)-Integer.parseInt(other.zipnum);
     }
     // postcondition: compares the zip + checkdigit 
     
