@@ -53,7 +53,7 @@ public class BarCode implements Comparable{
     // false if it is a non-matching barcode
     // true when they match.
     public int compareTo(Comparable other){
-	return zipDigits-other.zipDigits;
+	return zipDigits-(BarCode)other.zipDigits;
     }
     // postcondition: compares the zip + checkdigit 
     
