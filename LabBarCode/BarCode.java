@@ -1,8 +1,9 @@
 public class BarCode implements Comparable{
     // instance variables
-    private String _zip="";
-    private int _checkDigit=0; 
-    private String zipnum="";
+    private String _zip = "";
+    private int _checkDigit = 0; 
+    private String zipnum = "";
+    private int zipDigits = 0;
     private static final String[] digits={"||:::", ":::||", "::|:|", "::||:", ":|::|", ":|:|:", ":||::", 
                                    "|:::|", "|::|:", "|:|::"};
     // constructors
@@ -15,6 +16,7 @@ public class BarCode implements Comparable{
 	char[] hold = zip.toCharArray();
 	for (int x = 0; x<hold.length; x++){
 	    _zip+=digits[hold[x]];
+	    zipDigits+=hold[x]*10^(4-x);
 	}
 
 }
@@ -52,7 +54,7 @@ public class BarCode implements Comparable{
     
     
     public int compareTo(Comparable other){
-	return Integer.parseInt(zipnum)-Integer.parseInt(other.zipnum);
+	return zipDigits-other.zipDigits;
     }
     // postcondition: compares the zip + checkdigit 
     
