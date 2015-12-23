@@ -33,7 +33,8 @@ public class BarCode implements Comparable{
 	int _checkSum = 0;
 	char[] hold = zipnum.toCharArray();
 	for (int x = 0; x<hold.length; x++){
-	    _checkSum+=Integer.parseInt(hold[x]);
+	    String dig = ""+hold[x]
+	    _checkSum+=Integer.parseInt(String.parseString(dig));
 	}
 	return _checkSum%10;
     }
@@ -51,8 +52,6 @@ public class BarCode implements Comparable{
     // postcondition: false if the object is not a BarCode, 
     // false if it is a non-matching barcode
     // true when they match.
-    
-    
     public int compareTo(Comparable other){
 	return zipDigits-other.zipDigits;
     }
