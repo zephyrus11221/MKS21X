@@ -3,7 +3,8 @@ public class BarCode implements Comparable{
     private String _zip="";
     private int _checkDigit=0; 
     private String zipnum="";
-    private static final digits[]={"||:::", ":::||", "::|:|", "::||:", ":|::|", ":|:|:", ":||::", "|:::|", "|::|:", "|:|::"};
+    private static final String[] digits={"||:::", ":::||", "::|:|", "::||:", ":|::|", ":|:|:", ":||::", 
+                                   "|:::|", "|::|:", "|:|::"};
     // constructors
     //precondtion: zip.length() = 5 and zip contains only digits.
     //postcondition: throws a runtime exception zip is not the correct length
@@ -27,7 +28,7 @@ public class BarCode implements Comparable{
     
     //post: computes and returns the check sum for _zip
     private int checkSum(){
-	int _checkSum = 0
+	int _checkSum = 0;
 	char[] hold = zipnum.toCharArray();
 	for (int x = 0; x<hold.length; x++){
 	    _checkSum+=Integer.parseInteger(hold[x]);
