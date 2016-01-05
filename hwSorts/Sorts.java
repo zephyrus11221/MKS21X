@@ -17,7 +17,7 @@ public class Sorts{
 	    for (int y = x; y<data.length; x++){
 		hold = _min;
 		_min = Math.min(_min, data[y]);
-		if (!(hold==min)){
+		if (!(hold==_min)){
 		    index = y;
 		}
 	    }
