@@ -22,6 +22,7 @@ public class Sorts{
 		}
 	    }
 	    data[index]=data[x];
+	    data[x]=_min;
 	    printArray(data);
 	}
     }
