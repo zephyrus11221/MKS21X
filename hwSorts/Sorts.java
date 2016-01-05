@@ -14,7 +14,7 @@ public class Sorts{
 	int index = 0;
 	printArray(data);
 	for (int x = 0; x<data.length; x++){
-	    for (int y = x; y<data.length; x++){
+	    for (int y = x; y<data.length; y++){
 		hold = _min;
 		_min = Math.min(_min, data[y]);
 		if (!(hold==_min)){
