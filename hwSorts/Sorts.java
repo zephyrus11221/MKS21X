@@ -19,11 +19,10 @@ public class Sorts{
 		hold = _min;
 		_min = Math.min(_min, data[y]);
 		if (!(hold==_min)){
-		    index = y;
+		    data[y]=data[x];
+		    data[x]=data[min];
 		}
 	    }
-	    data[index]=data[x];
-	    data[x]=_min;
 	    printArray(data);
 	}
     }
