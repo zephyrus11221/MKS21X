@@ -20,7 +20,7 @@ public class Sorts{
 		_min = Math.min(_min, data[y]);
 		if (!(hold==_min)){
 		    data[y]=data[x];
-		    data[x]=data[_min];
+		    data[x]=_min;
 		}
 	    }
 	    printArray(data);
