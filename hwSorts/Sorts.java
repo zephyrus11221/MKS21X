@@ -24,7 +24,7 @@ public class Sorts{
 		    data[x]=_min;
 		}
 	    }
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 
@@ -37,7 +37,7 @@ public class Sorts{
 		j--;
 	    }
 	    data[j] = current;
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 
@@ -65,7 +65,7 @@ public class Sorts{
 		    swap(data, x, x+1);
 		    _swap = true;
 		}
-		printArray(data);
+		//printArray(data);
 	    }
 	    
 	}
