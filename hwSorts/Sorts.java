@@ -13,7 +13,6 @@ public class Sorts{
 	int _min = data[0];
 	int hold = 0;
 	int index = 0;
-	printArray(data);
 	for (int x = 0; x<data.length; x++){
 	    _min = data[x];
 	    for (int y = x; y<data.length; y++){
