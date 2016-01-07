@@ -28,6 +28,13 @@ public class Sorts{
 	}
     }
 
+    public static void swap(int[]data, int ind1, int ind2){
+	int hold = 0;
+	hold = data[x];
+	data[x]=data[x+1];
+	data[x+1]=hold;
+    }
+
     public static void fillRandom(int[] data){
 	Random RNG = new Random();
 	for (int x = 0; x < data.length; x++){
@@ -35,18 +42,15 @@ public class Sorts{
 	}
     }
     public static void bubbleSort(int[] data){
-	boolean swap = true;
+	boolean _swap = true;
 	int pass = 0;
-	int hold = 0;
 	while (swap){
 	    swap = false;
 	    pass++;
 	    for (int x = 0; x<data.length-pass; x++){
 		if (data[x]>data[x+1]){
-		    hold = data[x];
-		    data[x]=data[x+1];
-		    data[x+1]=hold;
-		    swap = true;
+		    swap(data, x, x+1);
+		    _swap = true;
 		}
 		printArray(data);
 	    }
