@@ -30,6 +30,7 @@ public class Sorts{
     public static void bubbleSort(int[] data){
 	boolean swap = true;
 	int pass = 0;
+	int hold = 0;
 	while (swap){
 	    swap = false;
 	    pass++;
