@@ -27,6 +27,24 @@ public class Sorts{
 	}
     }
 
+    public static void bubbleSort(int[] data){
+	boolean swap = true;
+	int pass = 0;
+	while (swap){
+	    swap = false;
+	    pass++;
+	    for (int x = 0; x<data.length-pass; x++){
+		if (data[x]>data[x+1]){
+		    hold = data[x];
+		    data[x]=data[x+1];
+		    data[x+1]=hold;
+		    swap = true;
+		}
+	    }
+	    printArray(data);
+	}
+    }
+
     public static void main(String[]args){
 	int[] thing = { 8, 6, 7, 5, 3, 0, 9};
 	Sorts.selectionSort(thing);
