@@ -45,7 +45,7 @@ public class Sorts{
 	boolean _swap = true;
 	int pass = 0;
 	while (_swap){
-	    swap = false;
+	    _swap = false;
 	    pass++;
 	    for (int x = 0; x<data.length-pass; x++){
 		if (data[x]>data[x+1]){
