@@ -47,8 +47,8 @@ public class Sorts{
     }
 
     public static void main(String[]args){
-	int[] thing = { 8, 6, 7, 5, 3, 0, 9};
-	Sorts.selectionSort(thing);
+	int[] thing = { 1 , 2,  9, 5, 0, 3};
+	Sorts.bubbleSort(thing);
     }
 
 }
