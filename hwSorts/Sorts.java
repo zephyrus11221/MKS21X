@@ -30,9 +30,9 @@ public class Sorts{
 
     public static void swap(int[]data, int ind1, int ind2){
 	int hold = 0;
-	hold = data[x];
-	data[x]=data[x+1];
-	data[x+1]=hold;
+	hold = data[ind1];
+	data[ind1]=data[ind2];
+	data[ind2]=hold;
     }
 
     public static void fillRandom(int[] data){
@@ -44,7 +44,7 @@ public class Sorts{
     public static void bubbleSort(int[] data){
 	boolean _swap = true;
 	int pass = 0;
-	while (swap){
+	while (_swap){
 	    swap = false;
 	    pass++;
 	    for (int x = 0; x<data.length-pass; x++){
