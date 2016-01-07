@@ -1,3 +1,4 @@
+import java.util.*;
 public class Sorts{
     public static void printArray(int[] data){
 	String otpt = "["+data[0];
@@ -26,6 +27,12 @@ public class Sorts{
 	    printArray(data);
 	}
     }
+
+    public static void fillRandom(int[] data){
+	Random RNG = new Random();
+	for (int x = 0; x < data.length; x++){
+	    data[x]=RNG.nextInt(10000);
+	}
 
     public static void bubbleSort(int[] data){
 	boolean swap = true;
