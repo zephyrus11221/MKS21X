@@ -41,8 +41,9 @@ public class Sorts{
 		    data[x+1]=hold;
 		    swap = true;
 		}
+		printArray(data);
 	    }
-	    printArray(data);
+	    
 	}
     }
 
