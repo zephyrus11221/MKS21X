@@ -33,7 +33,7 @@ public class Sorts{
 	for (int x = 0; x < data.length; x++){
 	    data[x]=RNG.nextInt(10000);
 	}
-
+    }
     public static void bubbleSort(int[] data){
 	boolean swap = true;
 	int pass = 0;
