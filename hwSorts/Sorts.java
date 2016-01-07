@@ -28,6 +28,19 @@ public class Sorts{
 	}
     }
 
+    public static void insertionSort(int[] data){
+	for (int i = 1; i < data.length; i++){
+	    int current = data[i];
+	    int j = i;
+	    while (j > 0 && data[j - 1] > current){
+		data[j] = data[j - 1];
+		j--;
+	    }
+	    data[j] = current;
+	    printArray(data);
+	}
+    }
+
     public static void swap(int[]data, int ind1, int ind2){
 	int hold = 0;
 	hold = data[ind1];
